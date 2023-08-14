@@ -101,14 +101,12 @@
     <label th:for="breed">Breed:</label>
     <input type="text" id="breed" th:field="*{breed}" required>
   </div>
-  <div>
-    <label th:for="age">Age:</label>
-    <select id="age" th:field="*{age}">
-      <th:block th:each="i : ${#numbers.sequence(0, 20)}">
-        <option th:value="${i}" th:text="${i}"></option>
-      </th:block>
-    </select>
-  </div>
+
+    <div class="form-group">
+      <label th:for="age">Age:</label>
+      <input class="form-control" th:field="${animalProfile.age}" />
+    </div>
+
   <div>
     <label th:for="comments">Comments:</label>
     <textarea id="comments" th:field="*{comments}"></textarea>

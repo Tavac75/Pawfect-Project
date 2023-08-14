@@ -18,9 +18,9 @@ and
             <ul class="navbar-buttons" >
                 <a th:href="@{/}"  type="button" class="btn btn-info"  >Pawfect Harmony</a>
                 <a th:href="@{/user/create}" type="button" class="btn btn-info" >Create Account</a>
-                <a th:href="@{/search}" type="button" class="btn btn-info" >Search</a>
-                <a th:href="@{/}" type="button" class="btn btn-info" >My Account</a>
-                <a th:href="@{/}" type="button" class="btn btn-info" >Post a Pet</a>
+                <a th:href="@{'/search/'}" type="button" class="btn btn-info" >Search</a>
+                <a th:href="@{'/user/useraccount/' + ${user?.id}}" type="button" class="btn btn-info" >My Account</a>
+                <a th:href="@{'/animalprofile/form/' + ${user?.id}}" type="button" class="btn btn-info" >Post a Pet</a>
                 <a th:href="@{/login}" type="button" class="btn btn-info" >Log in</a>
 
             </ul>
